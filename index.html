@@ -175,6 +175,139 @@
       main{padding:0 22px 28px}.grid.two{grid-template-columns:repeat(2,1fr)}.grid.three{grid-template-columns:repeat(3,1fr)}.dashboard-grid{display:grid; grid-template-columns:1.2fr .8fr; gap:14px; align-items:start}.quick-actions{grid-template-columns:repeat(4,1fr)}.modal-backdrop{align-items:center}.bottom-nav{border-radius:28px 28px 0 0; padding-left:14px; padding-right:14px}.field-row.desktop-three{grid-template-columns:repeat(3,1fr)}
     }
     @media (max-width:420px){.hero .money{font-size:29px}.grid.two,.grid.three{grid-template-columns:1fr}.quick-actions{grid-template-columns:repeat(2,1fr)}.field-row,.field-row.three{grid-template-columns:1fr}.brand-sub{max-width:190px}.nav-btn{font-size:10px}.nav-btn .nav-ico{font-size:19px}}
+
+
+    /* =========================================================
+       REFINAMENTO VISUAL PROFISSIONAL
+       Aparência mais sóbria, corporativa e menos infantil.
+       ========================================================= */
+    :root{
+      --primary:#1d4ed8;
+      --primary-2:#0891b2;
+      --primary-soft:rgba(29,78,216,.10);
+      --bg:#eef3f8;
+      --card:#ffffff;
+      --card-2:#f8fafc;
+      --text:#0f172a;
+      --muted:#64748b;
+      --line:#dbe3ee;
+      --shadow:0 18px 45px rgba(15,23,42,.10);
+      --shadow-soft:0 8px 24px rgba(15,23,42,.075);
+      --radius:20px;
+      --radius-sm:12px;
+    }
+    body.dark{
+      --bg:#0b1120;
+      --card:#111827;
+      --card-2:#172033;
+      --text:#f8fafc;
+      --muted:#aebbd0;
+      --line:#273449;
+      --primary-soft:rgba(56,189,248,.12);
+    }
+    body{
+      background:
+        radial-gradient(circle at top left, rgba(29,78,216,.08), transparent 34rem),
+        linear-gradient(180deg, var(--bg), #f8fafc 65%, var(--bg));
+    }
+    body.dark{
+      background:
+        radial-gradient(circle at top left, rgba(14,165,233,.12), transparent 34rem),
+        linear-gradient(180deg, var(--bg), #0f172a 65%, var(--bg));
+    }
+    .topbar{
+      height:72px;
+      padding:12px 20px;
+      background:rgba(248,250,252,.86);
+      border-bottom:1px solid rgba(219,227,238,.72);
+      box-shadow:0 8px 28px rgba(15,23,42,.045);
+    }
+    body.dark .topbar{background:rgba(11,17,32,.88); border-bottom-color:rgba(39,52,73,.8)}
+    .brand{gap:12px}
+    .logo{
+      width:44px;height:44px;border-radius:14px;
+      background:linear-gradient(135deg,#0f172a,#1d4ed8 64%,#0891b2);
+      color:#fff;font-size:14px;font-weight:1000;letter-spacing:.02em;
+      box-shadow:0 12px 26px rgba(29,78,216,.20);
+    }
+    .brand-title{font-size:18px;letter-spacing:-.03em}
+    .brand-sub{font-size:12px;color:#64748b;font-weight:650;letter-spacing:-.01em}
+    body.dark .brand-sub{color:#9fb0c6}
+    .icon-btn{box-shadow:none;border:1px solid var(--line);background:rgba(255,255,255,.8);font-weight:900}
+    body.dark .icon-btn{background:rgba(17,24,39,.8)}
+    main{padding-top:8px}
+    h1{font-size:25px;font-weight:950;letter-spacing:-.045em}
+    h2{font-size:18px;font-weight:950;color:var(--text)}
+    p{font-size:14px}
+    .hero{
+      border-radius:24px;
+      padding:24px;
+      background:
+        linear-gradient(135deg, rgba(15,23,42,.98), rgba(29,78,216,.94) 58%, rgba(8,145,178,.92)),
+        radial-gradient(circle at top right, rgba(255,255,255,.16), transparent 18rem);
+      box-shadow:0 22px 52px rgba(15,23,42,.16);
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .hero:before,.hero:after{opacity:.36;filter:blur(2px)}
+    .hero .label{text-transform:uppercase;letter-spacing:.08em;font-size:11px;font-weight:850;color:rgba(255,255,255,.76)}
+    .hero .money{font-size:36px;font-weight:1000;letter-spacing:-.055em}
+    .hero-mini{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16);border-radius:16px;box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+    .hero-mini span{font-size:12px;color:rgba(255,255,255,.76);font-weight:750}
+    .hero-mini b{font-size:16px}
+    .card,.item,.empty{
+      border-radius:20px;
+      box-shadow:var(--shadow-soft);
+      border:1px solid rgba(219,227,238,.92);
+    }
+    body.dark .card, body.dark .item, body.dark .empty{border-color:rgba(39,52,73,.92)}
+    .stat{min-height:88px}
+    .stat .ico{
+      width:42px;height:42px;border-radius:14px;
+      font-size:13px;font-weight:1000;
+      background:linear-gradient(135deg, rgba(29,78,216,.12), rgba(8,145,178,.10));
+      color:var(--primary);
+      border:1px solid rgba(29,78,216,.10);
+    }
+    .stat .name{font-size:11px;letter-spacing:.06em;color:#657389}
+    body.dark .stat .name{color:#a8b5c8}
+    .stat .val{font-size:19px}
+    .quick-actions{gap:12px;margin:16px 0 18px}
+    .quick{
+      min-height:78px;border-radius:19px;background:rgba(255,255,255,.94);
+      box-shadow:0 10px 28px rgba(15,23,42,.07);
+      font-size:12px;font-weight:950;color:#111827;border:1px solid rgba(219,227,238,.92);
+    }
+    body.dark .quick{background:rgba(17,24,39,.92);color:var(--text);border-color:rgba(39,52,73,.92)}
+    .quick span{
+      width:30px;height:30px;border-radius:11px;display:grid;place-items:center;
+      font-size:18px;color:var(--primary);background:var(--primary-soft);font-weight:1000;
+    }
+    .btn{border-radius:14px;box-shadow:0 10px 22px rgba(29,78,216,.20);font-weight:950}
+    .btn.ghost{background:var(--card-2);border:1px solid var(--line)}
+    .pill{font-weight:850;border-radius:999px;background:#f8fafc;color:#64748b}
+    body.dark .pill{background:#172033;color:#aebbd0}
+    .bottom-nav{
+      height:calc(78px + env(safe-area-inset-bottom));
+      padding:10px 10px calc(10px + env(safe-area-inset-bottom));
+      background:rgba(255,255,255,.90);
+      box-shadow:0 -14px 36px rgba(15,23,42,.08);
+    }
+    body.dark .bottom-nav{background:rgba(11,17,32,.92)}
+    .nav-btn{border-radius:16px;font-size:11px;font-weight:900;letter-spacing:-.01em}
+    .nav-btn .nav-ico{font-size:20px;font-weight:1000;line-height:1}
+    .nav-btn.active{background:linear-gradient(135deg, rgba(29,78,216,.12), rgba(8,145,178,.10));color:var(--primary)}
+    footer.card{
+      border-radius:20px!important;
+      box-shadow:0 8px 24px rgba(15,23,42,.055)!important;
+      font-size:12px!important;
+      line-height:1.45;
+      background:rgba(255,255,255,.86)!important;
+    }
+    body.dark footer.card{background:rgba(17,24,39,.86)!important}
+    .modal{border-radius:24px}.modal-head{border-radius:24px 24px 0 0}
+    input,select,textarea{border-radius:14px;background:var(--card-2)}
+    .welcome-card{background:rgba(15,23,42,.58);border-color:rgba(255,255,255,.16)}
+
   </style>
 </head>
 <body>
@@ -184,10 +317,10 @@
   <div class="app">
     <header class="topbar">
       <div class="brand">
-        <div class="logo">💰</div>
+        <div class="logo">BC</div>
         <div>
           <div class="brand-title">Bolso Certo</div>
-          <div class="brand-sub">Hardlife Tec • @hardlifetec</div>
+          <div class="brand-sub">Controle financeiro pessoal offline</div>
         </div>
       </div>
       <button class="icon-btn" onclick="openQuickMenu()" title="Menu rápido">☰</button>
@@ -212,11 +345,11 @@
   </div>
 
   <nav class="bottom-nav">
-    <button class="nav-btn active" data-screen="home" onclick="go('home')"><span class="nav-ico">🏠</span>Início</button>
-    <button class="nav-btn" data-screen="accounts" onclick="go('accounts')"><span class="nav-ico">🏦</span>Contas</button>
-    <button class="nav-btn" data-screen="transactions" onclick="go('transactions')"><span class="nav-ico">➕</span>Lançar</button>
-    <button class="nav-btn" data-screen="goals" onclick="go('goals')"><span class="nav-ico">🎯</span>Metas</button>
-    <button class="nav-btn" data-screen="more" onclick="go('more')"><span class="nav-ico">✨</span>Mais</button>
+    <button class="nav-btn active" data-screen="home" onclick="go('home')"><span class="nav-ico">⌂</span>Início</button>
+    <button class="nav-btn" data-screen="accounts" onclick="go('accounts')"><span class="nav-ico">▦</span>Contas</button>
+    <button class="nav-btn" data-screen="transactions" onclick="go('transactions')"><span class="nav-ico">＋</span>Lançar</button>
+    <button class="nav-btn" data-screen="goals" onclick="go('goals')"><span class="nav-ico">◎</span>Metas</button>
+    <button class="nav-btn" data-screen="more" onclick="go('more')"><span class="nav-ico">⋯</span>Mais</button>
   </nav>
 
   <div id="modalBackdrop" class="modal-backdrop" onclick="backdropClose(event)">
@@ -398,16 +531,17 @@
       data.budgets.filter(b=>b.month===nowMonth()).forEach(b=>{ const spent=periodTransactions(nowMonth()).filter(tx=>tx.type==='expense'&&tx.category===b.category).reduce((s,tx)=>s+Number(tx.amount||0),0); if(spent>Number(b.limit||0)) alerts.push(['warn',`Você ultrapassou o orçamento de ${b.category}.`]); });
       data.creditCards.forEach(c=>{ if(Number(c.limitUsed||0) > Number(c.limitTotal||1)*.8) alerts.push(['warn',`O cartão ${c.name} está próximo do limite.`]); });
       byId('screen-home').innerHTML=`
-        <div class="section-head"><div><h1>Olá, ${esc(name)} 👋</h1><p>Veja sua vida financeira em um só lugar.</p></div><span class="pill">${brDate(todayISO())}</span></div>
+        <div class="section-head"><div><h1>Olá, ${esc(name)}</h1><p>Painel consolidado da sua organização financeira.</p></div><span class="pill">${brDate(todayISO())}</span></div>
         <div class="dashboard-grid">
           <div>
             <div class="hero"><div class="label">Saldo total disponível</div><div class="money">${money(t.totalBalance)}</div><div class="hero-grid"><div class="hero-mini"><span>Receitas do mês</span><b>${money(t.income)}</b></div><div class="hero-mini"><span>Despesas do mês</span><b>${money(t.expense)}</b></div><div class="hero-mini"><span>Saldo previsto</span><b>${money(t.balance)}</b></div><div class="hero-mini"><span>Saúde financeira</span><b>${h.score}/100</b></div></div></div>
-            <div class="quick-actions"><button class="quick" onclick="openTransactionForm('income')"><span>➕</span>Receita</button><button class="quick" onclick="openTransactionForm('expense')"><span>➖</span>Despesa</button><button class="quick" onclick="openTransferForm()"><span>🔁</span>Transferir</button><button class="quick" onclick="openAccountForm()"><span>🏦</span>Conta</button></div>
+            <div class="quick-actions"><button class="quick" onclick="openTransactionForm('income')"><span>＋</span>Receita</button><button class="quick" onclick="openTransactionForm('expense')"><span>−</span>Despesa</button><button class="quick" onclick="openTransferForm()"><span>⇄</span>Transferir</button><button class="quick" onclick="openAccountForm()"><span>▦</span>Conta</button></div>
+            
             <div class="grid two">
-              ${stat('📅','Contas a vencer',t.soon.length,'warning')}
-              ${stat('🚨','Contas vencidas',t.overdue.length,'negative')}
-              ${stat('💳','Total em dívidas',money(t.debts),'negative')}
-              ${stat('🎯','Metas cadastradas',data.goals.length,'purple')}
+              ${stat('01','Contas a vencer',t.soon.length,'warning')}
+              ${stat('!','Contas vencidas',t.overdue.length,'negative')}
+              ${stat('R$','Total em dívidas',money(t.debts),'negative')}
+              ${stat('%','Metas cadastradas',data.goals.length,'purple')}
             </div>
             <div class="card" style="margin-top:12px"><h2>Alertas automáticos</h2><div class="list">${alerts.length?alerts.map(a=>`<div class="pill ${a[0]}">${a[1]}</div>`).join(''):'<div class="pill success">Nenhum alerta grave no momento.</div>'}</div></div>
           </div>
@@ -468,7 +602,7 @@
     function renderTransactions(){
       const month=reportFilter.month, txs=periodTransactions(month).sort((a,b)=>(b.date||b.dueDate).localeCompare(a.date||a.dueDate)); const t=totals(month);
       byId('screen-transactions').innerHTML=`<div class="section-head"><div><h1>Lançamentos</h1><p>Receitas, despesas, transferências e ajustes.</p></div><button class="btn small" onclick="openTransactionForm('expense')">+ Lançar</button></div>
-      <div class="grid three">${stat('⬆️','Receitas',money(t.income),'positive')}${stat('⬇️','Despesas',money(t.expense),'negative')}${stat('⚖️','Saldo',money(t.balance),t.balance>=0?'positive':'negative')}</div>
+      <div class="grid three">${stat('+','Receitas',money(t.income),'positive')}${stat('−','Despesas',money(t.expense),'negative')}${stat('=','Saldo',money(t.balance),t.balance>=0?'positive':'negative')}</div>
       <div class="card" style="margin:12px 0"><div class="field-row"><div><label>Mês</label><input type="month" value="${month}" onchange="reportFilter.month=this.value; render()"></div><div><label>Ação</label><button class="btn full" onclick="openTransactionForm('income')">Adicionar receita</button></div></div><div class="row wrap" style="margin-top:10px"><button class="btn ghost" onclick="openTransactionForm('expense')">Adicionar despesa</button><button class="btn ghost" onclick="openTransferForm()">Transferência</button><button class="btn ghost" onclick="openRecurringForm()">Recorrência</button><button class="btn ghost" onclick="generateRecurringForMonth(reportFilter.month);render()">Gerar recorrências</button></div></div>
       <div class="list">${txs.length?txs.map(tx=>txItem(tx)).join(''):'<div class="empty">Nenhum lançamento encontrado para este mês.</div>'}</div>`;
     }
@@ -529,7 +663,7 @@
     function saveTrip(id=''){const f=new FormData(byId('tripForm')); const obj={name:f.get('name'),destination:f.get('destination'),date:f.get('date'),people:Number(f.get('people')||1),hotel:num(f.get('hotel')),transport:num(f.get('transport')),food:num(f.get('food')),tours:num(f.get('tours')),shopping:num(f.get('shopping')),reserve:num(f.get('reserve')),others:num(f.get('others')),saved:num(f.get('saved')),accountId:f.get('accountId')}; if(id) Object.assign(data.trips.find(v=>v.id===id),obj); else data.trips.push({id:uid('trip'),...obj}); save(); closeModal(); render(); toast('Viagem salva.');}
     function deleteTrip(id){data.trips=data.trips.filter(v=>v.id!==id); save(); render(); toast('Viagem excluída.');}
     function tripToGoal(id){const v=data.trips.find(x=>x.id===id); const total=['hotel','transport','food','tours','shopping','reserve','others'].reduce((s,k)=>s+Number(v[k]||0),0); data.goals.push({id:uid('goal'),name:v.name,total,saved:Number(v.saved||0),targetDate:v.date,category:'Viagem',priority:'Alta',accountId:v.accountId,note:'Criada a partir do planejamento de viagem.',done:false}); save(); render(); toast('Viagem transformada em meta.');}
-    function reserveHTML(){const e=data.settings.emergency||{}; const rec=Number(e.monthlyCost||0)*Number(e.months||6); const saved=Number(e.saved||0); return `<div class="card"><h2>Reserva de emergência</h2><p>Informe seu custo médio mensal e quantos meses deseja cobrir.</p><form id="reserveForm" class="form-grid" style="margin-top:12px"><div class="field-row"><div><label>Custo mensal médio</label><input name="monthlyCost" ${currencyInputAttrs()} value="${e.monthlyCost?Number(e.monthlyCost).toLocaleString('pt-BR',{minimumFractionDigits:2}):''}"></div><div><label>Meses</label><select name="months">${[3,6,9,12].map(m=>`<option value="${m}" ${m==e.months?'selected':''}>${m} meses</option>`).join('')}</select></div></div><div><label>Valor já guardado</label><input name="saved" ${currencyInputAttrs()} value="${e.saved?Number(e.saved).toLocaleString('pt-BR',{minimumFractionDigits:2}):''}"></div><div><label>Conta vinculada</label><select name="accountId"><option value="">Nenhuma</option>${accountOptions(e.accountId)}</select></div><button type="button" class="btn" onclick="saveReserve()">Salvar reserva</button></form></div><div class="grid three" style="margin-top:12px">${stat('🛡️','Recomendado',money(rec),'info')}${stat('✅','Guardado',money(saved),'positive')}${stat('📌','Faltante',money(Math.max(0,rec-saved)),'warning')}</div><div class="card" style="margin-top:12px"><div class="progress"><i style="width:${Math.min(pct(saved,rec),100)}%"></i></div></div>`}
+    function reserveHTML(){const e=data.settings.emergency||{}; const rec=Number(e.monthlyCost||0)*Number(e.months||6); const saved=Number(e.saved||0); return `<div class="card"><h2>Reserva de emergência</h2><p>Informe seu custo médio mensal e quantos meses deseja cobrir.</p><form id="reserveForm" class="form-grid" style="margin-top:12px"><div class="field-row"><div><label>Custo mensal médio</label><input name="monthlyCost" ${currencyInputAttrs()} value="${e.monthlyCost?Number(e.monthlyCost).toLocaleString('pt-BR',{minimumFractionDigits:2}):''}"></div><div><label>Meses</label><select name="months">${[3,6,9,12].map(m=>`<option value="${m}" ${m==e.months?'selected':''}>${m} meses</option>`).join('')}</select></div></div><div><label>Valor já guardado</label><input name="saved" ${currencyInputAttrs()} value="${e.saved?Number(e.saved).toLocaleString('pt-BR',{minimumFractionDigits:2}):''}"></div><div><label>Conta vinculada</label><select name="accountId"><option value="">Nenhuma</option>${accountOptions(e.accountId)}</select></div><button type="button" class="btn" onclick="saveReserve()">Salvar reserva</button></form></div><div class="grid three" style="margin-top:12px">${stat('R','Recomendado',money(rec),'info')}${stat('G','Guardado',money(saved),'positive')}${stat('F','Faltante',money(Math.max(0,rec-saved)),'warning')}</div><div class="card" style="margin-top:12px"><div class="progress"><i style="width:${Math.min(pct(saved,rec),100)}%"></i></div></div>`}
     function saveReserve(){const f=new FormData(byId('reserveForm')); data.settings.emergency={monthlyCost:num(f.get('monthlyCost')),months:Number(f.get('months')),saved:num(f.get('saved')),accountId:f.get('accountId')}; save(); render(); toast('Reserva atualizada.');}
     function shoppingHTML(){return `<div class="card"><h2>Lista de compras</h2><p>Crie listas, estime valores e transforme em despesa.</p><button class="btn" style="margin-top:12px" onclick="openShoppingForm()">+ Nova lista</button></div><div class="list" style="margin-top:12px">${data.shoppingLists.length?data.shoppingLists.map(l=>{const est=l.items.reduce((s,i)=>s+Number(i.estimated||0),0); const real=l.items.reduce((s,i)=>s+Number(i.real||0),0); return `<div class="item"><div class="row"><div><div class="item-title">🛒 ${esc(l.name)}</div><div class="item-sub">${l.items.length} item(ns) • Estimado: ${money(est)} • Real: ${money(real)}</div></div><button class="btn small ghost" onclick="openShoppingForm('${l.id}')">Abrir</button></div></div>`}).join(''):'<div class="empty">Nenhuma lista criada.</div>'}</div>`}
     function openShoppingForm(id=''){const list=data.shoppingLists.find(x=>x.id===id)||{name:'Lista de compras',items:[]}; const rows=list.items.map((it,i)=>shoppingRow(it,i)).join(''); openModal('Lista de compras','Adicione itens e marque comprados.',`<form id="shopForm" class="form-grid"><div><label>Nome da lista</label><input name="name" value="${esc(list.name)}"></div><div id="shopItems">${rows||shoppingRow({},0)}</div><button type="button" class="btn ghost" onclick="addShopRow()">+ Item</button></form>`,`<button class="btn ghost" onclick="closeModal()">Cancelar</button><button class="btn" onclick="saveShopping('${id}')">Salvar</button>`)}
@@ -572,12 +706,12 @@
        12. RELATÓRIOS, GRÁFICOS E CALENDÁRIO
        ========================================================= */
     function renderMore(){
-      byId('screen-more').innerHTML=`<div class="section-head"><div><h1>Mais opções</h1><p>Relatórios, cartões, calendário, backup e configurações.</p></div></div><div class="grid two"><button class="quick" onclick="go('reports')"><span>📊</span>Relatórios</button><button class="quick" onclick="go('cards')"><span>💳</span>Cartões</button><button class="quick" onclick="go('planning')"><span>🗓️</span>Planejamento</button><button class="quick" onclick="go('calendar')"><span>📅</span>Calendário</button><button class="quick" onclick="openBackupModal()"><span>💾</span>Backup</button><button class="quick" onclick="go('config')"><span>⚙️</span>Configurações</button></div><div class="card" style="margin-top:12px"><h2>Privacidade</h2><p>Este aplicativo não acessa sua conta bancária. Todos os dados são cadastrados manualmente e ficam salvos apenas no seu dispositivo.</p></div><div class="card" style="margin-top:12px"><h2>Créditos</h2><p>Bolso Certo — Controle financeiro pessoal offline.</p><p><b>Desenvolvido por Tiago da Silva</b></p><p>Instagram: <b>@tiagohardlife</b></p><p>Empresa: <b>Hardlife Tec</b> — Instagram: <b>@hardlifetec</b></p></div>`;
+      byId('screen-more').innerHTML=`<div class="section-head"><div><h1>Mais opções</h1><p>Relatórios, cartões, calendário, backup e configurações.</p></div></div><div class="grid two"><button class="quick" onclick="go('reports')"><span>▥</span>Relatórios</button><button class="quick" onclick="go('cards')"><span>▭</span>Cartões</button><button class="quick" onclick="go('planning')"><span>▤</span>Planejamento</button><button class="quick" onclick="go('calendar')"><span>□</span>Calendário</button><button class="quick" onclick="openBackupModal()"><span>⇩</span>Backup</button><button class="quick" onclick="go('config')"><span>⚙</span>Configurações</button></div><div class="card" style="margin-top:12px"><h2>Privacidade</h2><p>Este aplicativo não acessa sua conta bancária. Todos os dados são cadastrados manualmente e ficam salvos apenas no seu dispositivo.</p></div>`;
     }
     function renderReports(){
       const t=totals(reportFilter.month), expenses=categorySum('expense'), incomes=categorySum('income'), accountsObj=Object.fromEntries(data.accounts.filter(a=>!a.archived).map(a=>[a.name,Number(a.currentBalance||0)]));
       const biggest=periodTransactions(reportFilter.month).filter(t=>t.type==='expense').sort((a,b)=>b.amount-a.amount).slice(0,5);
-      byId('screen-reports').innerHTML=`<div class="section-head"><div><h1>Relatórios</h1><p>Gráficos em Canvas/JS puro, sem biblioteca externa.</p></div><button class="btn small" onclick="printReport()">PDF</button></div><div class="card"><div class="field-row"><div><label>Mês</label><input type="month" value="${reportFilter.month}" onchange="reportFilter.month=this.value;render()"></div><div><label>Relatório</label><button class="btn full" onclick="printReport()">Imprimir/salvar PDF</button></div></div></div><div class="grid three" style="margin-top:12px">${stat('⬆️','Total recebido',money(t.income),'positive')}${stat('⬇️','Total gasto',money(t.expense),'negative')}${stat('⚖️','Saldo',money(t.balance),t.balance>=0?'positive':'negative')}</div><div class="grid two" style="margin-top:12px"><div class="card"><h2>Gastos por categoria</h2><div class="chart-wrap"><canvas id="pieExpense" width="330" height="260"></canvas></div><div id="legExpense" class="legend"></div></div><div class="card"><h2>Receitas por categoria</h2><div class="chart-wrap"><canvas id="pieIncome" width="330" height="260"></canvas></div><div id="legIncome" class="legend"></div></div><div class="card"><h2>Dinheiro por conta</h2><div class="chart-wrap"><canvas id="pieAccounts" width="330" height="260"></canvas></div><div id="legAccounts" class="legend"></div></div><div class="card"><h2>Receitas x despesas por mês</h2><canvas id="barMonth" width="420" height="260"></canvas></div><div class="card"><h2>Evolução do saldo/patrimônio</h2><canvas id="lineBalance" width="420" height="260"></canvas></div><div class="card"><h2>Maiores despesas</h2><div class="list">${biggest.length?biggest.map(tx=>txItem(tx,true)).join(''):'<div class="empty">Sem despesas no período.</div>'}</div></div></div>`;
+      byId('screen-reports').innerHTML=`<div class="section-head"><div><h1>Relatórios</h1><p>Gráficos em Canvas/JS puro, sem biblioteca externa.</p></div><button class="btn small" onclick="printReport()">PDF</button></div><div class="card"><div class="field-row"><div><label>Mês</label><input type="month" value="${reportFilter.month}" onchange="reportFilter.month=this.value;render()"></div><div><label>Relatório</label><button class="btn full" onclick="printReport()">Imprimir/salvar PDF</button></div></div></div><div class="grid three" style="margin-top:12px">${stat('+','Total recebido',money(t.income),'positive')}${stat('−','Total gasto',money(t.expense),'negative')}${stat('=','Saldo',money(t.balance),t.balance>=0?'positive':'negative')}</div><div class="grid two" style="margin-top:12px"><div class="card"><h2>Gastos por categoria</h2><div class="chart-wrap"><canvas id="pieExpense" width="330" height="260"></canvas></div><div id="legExpense" class="legend"></div></div><div class="card"><h2>Receitas por categoria</h2><div class="chart-wrap"><canvas id="pieIncome" width="330" height="260"></canvas></div><div id="legIncome" class="legend"></div></div><div class="card"><h2>Dinheiro por conta</h2><div class="chart-wrap"><canvas id="pieAccounts" width="330" height="260"></canvas></div><div id="legAccounts" class="legend"></div></div><div class="card"><h2>Receitas x despesas por mês</h2><canvas id="barMonth" width="420" height="260"></canvas></div><div class="card"><h2>Evolução do saldo/patrimônio</h2><canvas id="lineBalance" width="420" height="260"></canvas></div><div class="card"><h2>Maiores despesas</h2><div class="list">${biggest.length?biggest.map(tx=>txItem(tx,true)).join(''):'<div class="empty">Sem despesas no período.</div>'}</div></div></div>`;
       setTimeout(()=>{drawPie('pieExpense','legExpense',expenses);drawPie('pieIncome','legIncome',incomes);drawPie('pieAccounts','legAccounts',accountsObj);drawBars();drawLine();},20);
     }
     function drawPie(canvasId, legId, obj){const canvas=byId(canvasId); if(!canvas) return; const ctx=canvas.getContext('2d'); ctx.clearRect(0,0,canvas.width,canvas.height); const entries=Object.entries(obj).filter(e=>e[1]>0); const total=entries.reduce((s,e)=>s+e[1],0); const leg=byId(legId); if(!total){ctx.fillStyle=getComputedStyle(document.body).getPropertyValue('--muted'); ctx.font='15px system-ui'; ctx.textAlign='center'; ctx.fillText('Sem dados para o período',canvas.width/2,canvas.height/2); leg.innerHTML=''; return;} let start=-Math.PI/2; entries.forEach(([name,val],i)=>{const ang=(val/total)*Math.PI*2; ctx.beginPath(); ctx.moveTo(130,130); ctx.arc(130,130,92,start,start+ang); ctx.closePath(); ctx.fillStyle=colors[i%colors.length]; ctx.fill(); start+=ang;}); ctx.beginPath(); ctx.fillStyle=getComputedStyle(document.body).getPropertyValue('--card'); ctx.arc(130,130,48,0,Math.PI*2); ctx.fill(); ctx.fillStyle=getComputedStyle(document.body).getPropertyValue('--text'); ctx.font='bold 15px system-ui'; ctx.textAlign='center'; ctx.fillText(money(total),130,132); leg.innerHTML=entries.map(([name,val],i)=>`<div class="legend-row"><span><i class="dot" style="background:${colors[i%colors.length]}"></i>${esc(name)}</span><b>${money(val)} — ${((val/total)*100).toFixed(1).replace('.',',')}%</b></div>`).join('');}
@@ -605,12 +739,12 @@
     function exportBackup(){data.settings.lastBackup=todayISO(); save(); download('backup-bolso-certo-'+todayISO()+'.json', JSON.stringify(data,null,2)); toast('Backup exportado.');}
     function importBackup(file){if(!file) return; const r=new FileReader(); r.onload=()=>{try{const obj=JSON.parse(r.result); if(!obj.accounts||!obj.transactions) throw new Error('inválido'); data=obj; save(); closeModal(); render(); toast('Backup importado.');}catch(e){toast('Arquivo de backup inválido.')}}; r.readAsText(file);}
     function exportCSV(){const rows=[['tipo','descricao','valor','data','vencimento','categoria','status']].concat(data.transactions.map(t=>[t.type,t.description,t.amount,t.date,t.dueDate,t.category,t.status])); download('lancamentos-bolso-certo.csv', rows.map(r=>r.map(x=>`"${String(x??'').replace(/"/g,'""')}"`).join(';')).join('\n'), 'text/csv;charset=utf-8'); toast('CSV exportado.');}
-    function printReport(){const t=totals(reportFilter.month); const rows=periodTransactions(reportFilter.month).map(tx=>`<tr><td>${tx.type}</td><td>${esc(tx.description)}</td><td>${money(tx.amount)}</td><td>${brDate(tx.date)}</td><td>${esc(tx.category||'')}</td><td>${esc(tx.status||'')}</td></tr>`).join(''); byId('printArea').innerHTML=`<div class="print-title">Bolso Certo — Relatório financeiro</div><p>Usuário: ${esc(data.settings.userName||'Não informado')}</p><p>Período: ${reportFilter.month} • Gerado em ${brDate(todayISO())}</p><div class="print-grid"><div class="print-card"><b>Receitas</b><br>${money(t.income)}</div><div class="print-card"><b>Despesas</b><br>${money(t.expense)}</div><div class="print-card"><b>Saldo</b><br>${money(t.balance)}</div></div><div class="print-card"><h3>Contas cadastradas</h3>${data.accounts.map(a=>`<p>${esc(a.name)} — ${money(a.currentBalance)}</p>`).join('')}</div><div class="print-card"><h3>Lançamentos</h3><table class="print-table"><thead><tr><th>Tipo</th><th>Descrição</th><th>Valor</th><th>Data</th><th>Categoria</th><th>Status</th></tr></thead><tbody>${rows}</tbody></table></div><p><b>Desenvolvido por Tiago da Silva</b> — Instagram @tiagohardlife</p><p><b>Hardlife Tec</b> — Instagram @hardlifetec</p>`; window.print();}
+    function printReport(){const t=totals(reportFilter.month); const rows=periodTransactions(reportFilter.month).map(tx=>`<tr><td>${tx.type}</td><td>${esc(tx.description)}</td><td>${money(tx.amount)}</td><td>${brDate(tx.date)}</td><td>${esc(tx.category||'')}</td><td>${esc(tx.status||'')}</td></tr>`).join(''); byId('printArea').innerHTML=`<div class="print-title">Bolso Certo — Relatório financeiro</div><p>Usuário: ${esc(data.settings.userName||'Não informado')}</p><p>Período: ${reportFilter.month} • Gerado em ${brDate(todayISO())}</p><div class="print-grid"><div class="print-card"><b>Receitas</b><br>${money(t.income)}</div><div class="print-card"><b>Despesas</b><br>${money(t.expense)}</div><div class="print-card"><b>Saldo</b><br>${money(t.balance)}</div></div><div class="print-card"><h3>Contas cadastradas</h3>${data.accounts.map(a=>`<p>${esc(a.name)} — ${money(a.currentBalance)}</p>`).join('')}</div><div class="print-card"><h3>Lançamentos</h3><table class="print-table"><thead><tr><th>Tipo</th><th>Descrição</th><th>Valor</th><th>Data</th><th>Categoria</th><th>Status</th></tr></thead><tbody>${rows}</tbody></table></div>`; window.print();}
     function wipeData(){confirmBox('Deseja realmente apagar todos os dados? Esta ação não pode ser desfeita.',()=>{localStorage.removeItem(STORAGE_KEY); data=defaultData(); closeModal(); render(); showWelcome(); toast('Todos os dados foram apagados.');})}
     function openPinSetup(){openModal('Configurar PIN','Crie um PIN de 4 ou 6 dígitos.',`<form id="pinForm" class="form-grid"><div><label>Novo PIN</label><input name="pin" type="password" inputmode="numeric" maxlength="6"></div><div><label>Confirmar PIN</label><input name="pin2" type="password" inputmode="numeric" maxlength="6"></div></form>`,`<button class="btn ghost" onclick="closeModal()">Cancelar</button><button class="btn" onclick="savePin()">Salvar PIN</button>`)}
     function savePin(){const f=new FormData(byId('pinForm')), p=f.get('pin'), p2=f.get('pin2'); if(!/^\d{4,6}$/.test(p)) return toast('O PIN deve ter 4 ou 6 números.'); if(p!==p2) return toast('A confirmação não confere.'); data.settings.pinEnabled=true; data.settings.pin=p; save(); closeModal(); render(); toast('PIN ativado.');}
     function disablePin(){data.settings.pinEnabled=false; data.settings.pin=''; save(); render(); toast('PIN desativado.');}
-    function showWelcome(){if(data.settings.privacyAccepted) return; const el=byId('welcomeScreen'); el.innerHTML=`<div class="welcome-card"><div class="logo" style="width:64px;height:64px;font-size:32px;margin-bottom:14px">💰</div><h1>Bem-vindo ao Bolso Certo</h1><p>Este aplicativo não acessa sua conta bancária. Todos os dados são cadastrados manualmente e ficam salvos apenas no seu dispositivo.</p><div class="grid" style="margin-top:18px"><button class="btn success" onclick="startClean()">Começar do zero</button><button class="btn ghost" onclick="loadExamples()">Carregar dados de exemplo</button></div><p class="tiny" style="margin-top:14px">Offline • Sem servidor • Sem bibliotecas externas • Desenvolvido por Tiago da Silva • @tiagohardlife • Hardlife Tec • @hardlifetec</p></div>`; el.classList.add('show');}
+    function showWelcome(){if(data.settings.privacyAccepted) return; const el=byId('welcomeScreen'); el.innerHTML=`<div class="welcome-card"><div class="logo" style="width:64px;height:64px;font-size:20px;margin-bottom:14px">BC</div><h1>Bem-vindo ao Bolso Certo</h1><p>Este aplicativo não acessa sua conta bancária. Todos os dados são cadastrados manualmente e ficam salvos apenas no seu dispositivo.</p><div class="grid" style="margin-top:18px"><button class="btn success" onclick="startClean()">Começar do zero</button><button class="btn ghost" onclick="loadExamples()">Carregar dados de exemplo</button></div><p class="tiny" style="margin-top:14px">Offline • Sem servidor • Sem bibliotecas externas</p></div>`; el.classList.add('show');}
     function startClean(){data.settings.privacyAccepted=true; save(); byId('welcomeScreen').classList.remove('show'); render();}
     function loadExamples(){data=defaultData(); data.settings.privacyAccepted=true; data.settings.userName='Tiago'; data.accounts=[{id:'acc_mp',name:'Mercado Pago',type:'Carteira digital',initialBalance:1200,currentBalance:1200,color:'#22c55e',icon:'💳',note:'Conta usada para gastos diários.',main:true,archived:false,createdAt:todayISO()},{id:'acc_san',name:'Santander',type:'Banco',initialBalance:800,currentBalance:800,color:'#ef4444',icon:'🏦',note:'Conta principal.',main:false,archived:false,createdAt:todayISO()},{id:'acc_cash',name:'Dinheiro em espécie',type:'Dinheiro em espécie',initialBalance:150,currentBalance:150,color:'#f59e0b',icon:'💵',note:'Carteira física.',main:false,archived:false,createdAt:todayISO()}]; data.transactions=[{id:uid('tx'),type:'income',description:'Salário',amount:5000,date:nowMonth()+'-05',dueDate:nowMonth()+'-05',category:'Salário',accountId:'acc_san',paymentMethod:'Pix',status:'paid',createdAt:todayISO()},{id:uid('tx'),type:'expense',description:'Mercado',amount:450,date:nowMonth()+'-10',dueDate:nowMonth()+'-10',category:'Mercado',accountId:'acc_mp',paymentMethod:'Débito',status:'paid',createdAt:todayISO()},{id:uid('tx'),type:'expense',description:'Internet',amount:119.9,date:nowMonth()+'-15',dueDate:nowMonth()+'-15',category:'Internet',accountId:'acc_san',paymentMethod:'Boleto',status:'pending',createdAt:todayISO()}]; data.goals=[{id:uid('goal'),name:'Viagem para Gramado',total:3500,saved:1000,targetDate:addMonths(todayISO(),5),category:'Viagem',priority:'Alta',accountId:'acc_mp',note:'',done:false}]; data.creditCards=[{id:'card_nu',name:'Nubank',institution:'Nubank',limitTotal:3000,limitUsed:650,closeDay:20,dueDay:10,color:'#8b5cf6'}]; recalculateBalances(); save(); byId('welcomeScreen').classList.remove('show'); render(); toast('Dados de exemplo carregados.');}
     function showLock(){if(!data.settings.pinEnabled) return; const el=byId('lockScreen'); let pin=''; function draw(){el.innerHTML=`<div class="welcome-card"><h1>Bolso Certo bloqueado 🔒</h1><p>Digite seu PIN para acessar.</p><div class="pin-dots">${[0,1,2,3,4,5].slice(0,data.settings.pin.length||4).map((_,i)=>`<i class="pin-dot ${i<pin.length?'on':''}"></i>`).join('')}</div><div class="pin-pad">${[1,2,3,4,5,6,7,8,9,'⌫',0,'OK'].map(k=>`<button class="pin-key" onclick="pinPress('${k}')">${k}</button>`).join('')}</div></div>`} window.pinPress=function(k){if(k==='⌫') pin=pin.slice(0,-1); else if(k==='OK'){ if(pin===data.settings.pin){el.classList.remove('show'); toast('Acesso liberado.')} else {pin=''; toast('PIN incorreto.')} } else if(pin.length<6) pin+=k; draw();}; draw(); el.classList.add('show');}
